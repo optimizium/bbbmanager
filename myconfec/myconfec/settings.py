@@ -15,6 +15,8 @@ MAIN_PROJECT = os.path.dirname(__file__)
 BBB_API_URL = "http://test-install.blindsidenetworks.com/bigbluebutton/api/"
 SALT = "8cd8ef52e8e101574e400365b55e11a6"
 
+BASE_URL = "http://128.199.76.123:8080"
+LOGIN_URL = "/account/login"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -69,8 +71,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 ##################Mail 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'youreail'
-EMAIL_HOST_PASSWORD = 'password'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
@@ -109,7 +111,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Calcutta'
 
 USE_I18N = True
 
@@ -126,6 +128,6 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/youpath/myconfec/static/',
+    '/home/rohit/myconfec/static/',
 )
 
