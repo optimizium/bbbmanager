@@ -1,19 +1,22 @@
 from django.db import models
-from organization.models import Organization
+#from organization.models import *
 import datetime 
+from django.contrib.auth.models import User
+from organization.models import Organization
+class UserProfile(models.Model):
 
-class User(models.Model):
+    user = models.OneToOneField(User)  
+#    first_name = models.CharField(max_length=100)
+#    middle_name = models.CharField(max_length=100)
+#    last_name = models.CharField(max_length=100)
 
-    first_name = models.CharField(max_length=100)
-    middle_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-
-    user_name = models.CharField(max_length=100)
-    passwd = models.CharField(max_length=80)
-    role = models.CharField(max_length = 20)
-    org_name = models.ForeignKey(Organization,related_name = 'user_org_nm',null= False)
+#    user_name = models.CharField(max_length=100)
+#    passwd = models.CharField(max_length=80)
+#    role = models.CharField(max_length = 20)
+#    org_name = models.ForeignKey('organization.Organization',related_name = 'user_org_nm',null= False)
     timezone = models.CharField(max_length = 50)
     
+    org_pin = models.CharField(max_length = 100)
     city = models.CharField(max_length=100,null = True,blank = True)
     state = models.CharField(max_length=100,null = True,blank = True)
     country = models.CharField(max_length=100,null = True,blank = True)
